@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="volDBModelStoreContainer" CdmEntityContainer="volDBEntities">
+    <EntitySetMapping Name="Client">
+      <EntityTypeMapping TypeName="volDBModel.Client">
+        <MappingFragment StoreEntitySet="Client">
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="nom" ColumnName="nom" />
+          <ScalarProperty Name="prenom" ColumnName="prenom" />
+          <ScalarProperty Name="CIN" ColumnName="CIN" />
+          <ScalarProperty Name="age" ColumnName="age" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Compagnie">
+      <EntityTypeMapping TypeName="volDBModel.Compagnie">
+        <MappingFragment StoreEntitySet="Compagnie">
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="nom" ColumnName="nom" />
+          <ScalarProperty Name="secteur" ColumnName="secteur" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vol">
+      <EntityTypeMapping TypeName="volDBModel.Vol">
+        <MappingFragment StoreEntitySet="Vol">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre_max" ColumnName="nombre_max" />
+          <ScalarProperty Name="destination" ColumnName="destination" />
+          <ScalarProperty Name="ville_depart" ColumnName="ville_depart" />
+          <ScalarProperty Name="date_depart" ColumnName="date_depart" />
+          <ScalarProperty Name="prix" ColumnName="prix" />
+          <ScalarProperty Name="compagnie" ColumnName="compagnie" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="volDBModel1StoreContainer" CdmEntityContainer="volDBEntities1">
+    <EntitySetMapping Name="reservation">
+      <EntityTypeMapping TypeName="volDBModel1.reservation">
+        <MappingFragment StoreEntitySet="reservation">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="id_vol" ColumnName="id_vol" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="CIN" ColumnName="CIN" />
+          <ScalarProperty Name="nom" ColumnName="nom" />
+          <ScalarProperty Name="prenom" ColumnName="prenom" />
+          <ScalarProperty Name="destination" ColumnName="destination" />
+          <ScalarProperty Name="date_dpart" ColumnName="date_dpart" />
+          <ScalarProperty Name="prix" ColumnName="prix" />
+          <ScalarProperty Name="nb_place" ColumnName="nb_place" />
+          <ScalarProperty Name="compagnie" ColumnName="compagnie" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
