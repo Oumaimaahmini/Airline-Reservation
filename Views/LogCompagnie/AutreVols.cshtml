@@ -1,0 +1,72 @@
+﻿@model IEnumerable<SiteVol.Models.VolComp>
+
+@{
+    ViewBag.Title = "AutreVols";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    string[] tabHeads = new string[]{"ID"
+      ,"Nombre max de places"
+      ,"Destination"
+      ,"Lieu de depart"
+      ,"Date de depart"
+      ,"Prix"
+      ,"Compagnie" };
+}
+<style>
+    th {
+        background-color: #0094ff;
+        color: white;
+    }
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+</style>
+
+<h2>AutreVols</h2>
+
+<div class="table">
+    <table class="table table table-bordered table-hover">
+        <thead>
+            <tr>
+                @{
+                    foreach (var head in tabHeads)
+                    {
+                        <th>
+                            @{
+                                @head
+
+                            }
+                        </th>
+
+                    }
+                }
+
+            </tr>
+
+        </thead>
+        <tbody>
+            @{
+                if (Model != null)
+                {
+                    foreach (var data in Model)
+                    {
+                        <tr>
+                            <td>@data.id </td>
+                            <td> @data.nombre_max </td>
+                            <td> @data.destination </td>
+                            <td> @data.ville_depart </td>
+                            <td> @data.date_depart </td>
+                            <td> @data.prix </td>
+                            <td> @data.compagnie </td>
+                        </tr>
+
+                    }
+                }
+            }
+
+        </tbody>
+
+    </table>
+
+
+</div>

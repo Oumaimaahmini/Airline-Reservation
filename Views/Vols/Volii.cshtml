@@ -1,0 +1,105 @@
+﻿
+@{
+    ViewBag.Title = "Volii";
+    Layout = "~/Views/_LayoutRecherche.cshtml";
+}
+
+
+
+<div id="booking" class="section">
+    <div class="section-center">
+        <div class="container">
+            <div class="row">
+                <div class="booking-form">
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <div class="form-checkbox">
+                                <label for="roundtrip">
+                                    <input type="radio" id="roundtrip" name="flight-type">
+                                    <span></span>Roundtrip
+                                </label>
+                                <label for="one-way">
+                                    <input type="radio" id="one-way" name="flight-type">
+                                    <span></span>One way
+                                </label>
+                                <label for="multi-city">
+                                    <input type="radio" id="multi-city" name="flight-type">
+                                    <span></span>Multi-City
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <span class="form-label">Ville de Depart</span>
+                                    <input class="form-control" type="text" name="ville_depart" placeholder="City or airport">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <span class="form-label">Destination</span>
+                                    <input class="form-control" type="text" name="destination" placeholder="City or airport">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Date de Depart</span>
+                                    <input class="form-control" type="date" required>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Date de Retour</span>
+                                    <input class="form-control" type="date" required>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <span class="form-label">Adultes (18+)</span>
+                                    <select class="form-control">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
+                                    <span class="select-arrow"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <span class="form-label">Enfants (0-17)</span>
+                                    <select class="form-control">
+                                        <option>0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                    </select>
+                                    <span class="select-arrow"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">classe de voyage</span>
+                                    <select class="form-control">
+                                        <option>Economy class</option>
+                                        <option>Business class</option>
+                                        <option>First class</option>
+                                    </select>
+                                    <span class="select-arrow"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-btn">
+                                    <button class="submit-btn" onclick="location.href='@Url.Action("Login", "LogClient")'">Afficher les Vols</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

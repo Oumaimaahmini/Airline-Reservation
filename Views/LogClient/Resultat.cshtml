@@ -1,0 +1,80 @@
+﻿
+@model IEnumerable<SiteVol.Models.VolComp>
+
+@{
+    ViewBag.Title = "Resultat";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string[] tabHeads = new string[]{"ID"
+      ,"Nombre max de places"
+      ,"Destination"
+      ,"Lieu de depart"
+      ,"Date de depart"
+      ,"Prix"
+      ,"Compagnie" };
+}
+<style>
+    th {
+        background-color: #0094ff;
+        color: white;
+    }
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+</style>
+<h2>Resultat</h2>
+
+<br />
+
+<div class="table">
+    <table class="table table table-bordered table-hover">
+        <thead>
+            <tr>
+                @{
+                    foreach (var head in tabHeads)
+                    {
+                        <th>
+                            @{
+                                @head
+
+                            }
+                        </th>
+
+                    }
+                }
+
+            </tr>
+
+        </thead>
+        <tbody>
+            @{
+                if (Model != null)
+                {
+                    foreach (var data in Model)
+                    {
+                        <tr>
+                            <td>@data.id </td>
+                            <td> @data.nombre_max </td>
+                            <td> @data.destination </td>
+                            <td> @data.ville_depart </td>
+                            <td> @data.date_depart </td>
+                            <td> @data.prix </td>
+                            <td> @data.compagnie </td>
+
+                            <td>
+                                <div class="input-group-btn">
+                                    <button type="button" class="btn btn-danger" onclick="location.href='@Url.Action("Booking", "LogClient",new{ id_vol=data.id, destination=data.destination, date_depart=data.date_depart, prix=data.prix, compagnie=data.compagnie })'">Réserver</button>
+
+                                </div>
+                            </td>
+                        </tr>
+
+                    }
+                }
+            }
+
+        </tbody>
+
+    </table>
+
+
+</div>

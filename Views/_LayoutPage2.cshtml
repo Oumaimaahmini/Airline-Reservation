@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+</head>
+<style>
+
+    /* Add a dark background color with a little bit see-through */
+    .navbar {
+        margin-bottom: 0;
+        background-color: #ff0000;
+        border: 0;
+        font-size: 15px !important;
+        letter-spacing: 4px;
+        opacity: 0.9;
+    }
+
+        /* Add a gray color to all navbar links */
+        .navbar li a, .navbar .navbar-brand {
+            color: #fff !important;
+        }
+
+    /* On hover, the links will turn white */
+    .navbar-nav li a:hover {
+        color: #fff !important;
+    }
+
+    /* The active link */
+    .navbar-nav li.active a {
+        color: #fff !important;
+        background-color: #29292c !important;
+    }
+
+    /* Remove border color from the collapsible button */
+    .navbar-default .navbar-toggle {
+        border-color: transparent;
+    }
+
+    /* Dropdown */
+    .open .dropdown-toggle {
+        color: #fff;
+        background-color: #555 !important;
+    }
+
+    /* Dropdown links */
+    .dropdown-menu li a {
+        color: #000 !important;
+    }
+
+        /* On hover, the dropdown links will turn red */
+        .dropdown-menu li a:hover {
+            background-color: red !important;
+        }
+</style>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("HOME", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Vols", "Volii", "Vols")</li>
+                    @* <li>@Html.ActionLink("Compagnies", "Index", "Compagnies")</li>*@
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Compagnies
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Ajouter ou supprimer des vols ", "Index", "Compagnies")</li>
+                            <li>@Html.ActionLink("Afficher les places disponibles ", "Index", "Compagnies")</li>
+                            <li>@Html.ActionLink("Consulter les vols des autres compagnies", "Index", "Compagnies")</li>
+                        </ul>
+                    </li>
+                    @* <li>@Html.ActionLink("Clients", "Index", "Clients")</li>*@
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Clients
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Consulter l’ensemble des vols ", "Index", "Clients")</li>
+                            <li>@Html.ActionLink("Réserver des vols  ", "Index", "Clients")</li>
+                            <li>@Html.ActionLink("Annuler réservation ", "Index", "Clients")</li>
+                        </ul>
+                    </li>
+                    <li>@Html.ActionLink("À propos de", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div>
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Mon application ASP.NET</p>
+        </footer>
+    </div>
+
+  
+</body>
+</html>
+
+
+

@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+
+<!--header-->
+<div class="header-w3l">
+    <h1> Login Compagnie </h1>
+</div>
+<!--//header-->
+<!--main-->
+<div class="main-content-agile">
+    <div class="sub-main-w3">
+        <form action="Verify" method="post">
+            <input placeholder="Username or E-mail" name="name" class="user" type="text" required=""><br>
+            <input placeholder="Password" name="password" class="pass" type="password" required=""><br>
+            <input type="submit" value="">
+        </form>
+    </div>
+    <br />
+    <button type="button" class="btn btn-danger" onclick="location.href='@Url.Action("Create", "Compagnies")'"> S'inscrire</button>
+</div>
+
+    
+
+
+
+
+<!--//main-->
+<!--footer-->
+
+<!--//footer-->

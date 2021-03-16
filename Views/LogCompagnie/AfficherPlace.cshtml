@@ -1,0 +1,77 @@
+﻿@model IEnumerable<SiteVol.Models.Place>
+
+@{
+    ViewBag.Title = "AfficherPlace";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string[] tabHeads = new string[]{"ID"
+      ,"Nombre max de places"
+      ,"Compagnie"
+      ,"Nombre de Places Reservees"
+      ,"Nombre de Places Disponibles"
+
+    };
+}
+
+<style>
+    th {
+        background-color: #0094ff;
+        color: white;
+    }
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+</style>
+
+<h2>Les Place Disponibles </h2>
+
+<br />
+
+<div class="table">
+    <table class="table table table-bordered table-hover">
+        <thead>
+            <tr>
+                @{
+                    foreach (var head in tabHeads)
+                    {
+                        <th>
+                            @{
+                                @head
+
+                            }
+                        </th>
+
+                    }
+                }
+
+            </tr>
+
+        </thead>
+        <tbody>
+            @{
+                if (Model != null)
+                {
+                    foreach (var data in Model)
+                    {
+                        <tr>
+                            <td>@data.id </td>
+                            <td> @data.nombre_max </td>
+                            <td> @data.compagnie </td>
+                            <td> @data.reserve </td>
+
+                            @{ int dispo = Int32.Parse(@data.nombre_max) - Int32.Parse(@data.reserve);}
+
+                            <td> @dispo </td>
+ 
+                        </tr>
+
+                    }
+                }
+            }
+
+        </tbody>
+
+    </table>
+
+
+</div>
+

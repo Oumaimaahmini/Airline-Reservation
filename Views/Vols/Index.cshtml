@@ -1,0 +1,74 @@
+﻿@model IEnumerable<SiteVol.Models.Vol>
+
+@{
+    ViewBag.Title = "Index";
+}
+<style>
+    th {
+        background-color: #0094ff;
+        color: white;
+    }
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+</style>
+<h2>Les Vols</h2>
+
+<br />
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre_max)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.destination)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ville_depart)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date_depart)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.prix)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.compagnie)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre_max)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.destination)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ville_depart)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_depart)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.prix)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.compagnie)
+        </td>
+        <td>
+           | @Html.ActionLink("Details", "Details", new { id=item.id }) |   
+        </td>
+        <td>
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-danger" onclick="location.href='@Url.Action("Booking", "LogClient",new{ id_vol=item.id, destination=item.destination, date_depart=item.date_depart, prix=item.prix, compagnie=item.compagnie })'">Réserver</button>
+
+            </div>
+        </td>
+    </tr>
+}
+
+</table>

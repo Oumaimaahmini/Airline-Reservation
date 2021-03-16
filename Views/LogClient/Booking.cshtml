@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewBag.Title = "Booking";
+    Layout = "~/Views/_Layoutbooking.cshtml";
+}
+
+
+<!---header--->
+<div class="header w3ls">
+    <h1>Reservation Form</h1>
+</div>
+<!---header--->
+<!---main--->
+<div class="main">
+    <div class="main-section agile">
+        <div class="login-form">
+            @using (Html.BeginForm("Reserver", "LogClient", FormMethod.Post))
+            {
+
+                    <ul>
+                        <li class="text-info">CIN *</li>
+                        <li><input type="text" name="CIN" placeholder="" required></li>
+                        <div class="clear"></div>
+                    </ul>
+                    <ul>
+                        <li class="text-info">Nom *</li>
+                        <li><input type="text" name="nom" placeholder="" required></li>
+                        <div class="clear"></div>
+                    </ul>
+                    <ul>
+                        <li class="text-info">Prenom *</li>
+                        <li><input type="text" name="prenom" placeholder="" required></li>
+                        <div class="clear"></div>
+                    </ul>
+                    <ul>
+                        <li class="text-info">User Name *</li>
+                        <li><input type="text" name="username" placeholder="" required></li>
+                        <div class="clear"></div>
+                    </ul>
+
+
+                    <ul>
+                        <li class="text-info">Nombre de Places *</li>
+                        <li class="se">
+                            <select class="time-dropdown form-dropdown validate[required, limitDate]" id="min_15" name="nb_place">
+                                <option>  0</option>
+                                <option value="1"> 1 </option>
+                                <option value="2"> 2 </option>
+                                <option value="3"> 3 </option>
+                                <option value="4"> 4 </option>
+                                <option value="5"> 5 </option>
+                                <option value="6"> 6 </option>
+                                <option value="7"> 7 </option>
+                                <option value="8"> 8 </option>
+                                <option value="9"> 9 </option>
+                            </select>
+                        </li>
+                        <div class="clear"></div>
+                    </ul>
+                    <ul>
+                        <li class="text-info">Additional Message :</li>
+                        <li><textarea></textarea></li>
+                        <div class="clear"></div>
+                    </ul>
+                    <input type="submit" value="Submit">
+                    <div class="clear"></div>
+            }
+            </div>
+    </div>
+</div>
+<div class="footer w3agile">
+    <p>&copy 2021 Classy Booking Form . All rights reserved </p>
+</div>
+
+<!---main--->

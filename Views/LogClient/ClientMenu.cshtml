@@ -1,0 +1,81 @@
+﻿
+@model SiteVol.Models.LogClient
+
+@{
+    ViewBag.Title = "ClientMenu";
+    Layout = "~/Views/_LayoutPage2.cshtml";
+
+}
+
+<style>
+
+    .jumbotron {
+        background-color: #ff0000;
+        color: #fff;
+        padding: 250px 1px;
+    }
+
+    .jumbotron_bla {
+        background-color: #fff;
+        color: #ff0000;
+        padding: 200px 1px;
+    }
+    /* Black buttons with extra padding and without rounded borders */
+    .btn {
+        padding: 10px 80px;
+        background-color: #0094ff;
+        color: #f1f1f1;
+        border-radius: 0;
+        transition: .2s;
+    }
+
+        /* On hover, the color of .btn will transition to white with black text */
+        .btn:hover, .btn:focus {
+            border: 1px solid #333;
+            background-color: #fff;
+            color: #000;
+        }
+</style>
+
+<div class="row text-center">
+    <div class="col-sm-6">
+        <div class="jumbotron">
+            <h1>Compagnie aérienne</h1>
+            <p>On specialise dans la perfection</p>
+        </div>
+
+    </div>
+    <div class="col-sm-6">
+
+
+        <div class="jumbotron_bla">
+
+            <h2>Bienvenu  @Model.clientName</h2>
+
+            <br />
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-danger" onclick="location.href='@Url.Action("Index", "Vols")'"> Consulter les vols </button>
+            </div>
+            <br />
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-danger"  onclick="location.href='@Url.Action("Recherche", "LogClient")'">  Rechercher les vols</button>
+            </div>
+            <br />
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-danger" onclick="location.href='@Url.Action("Index", "Vols")'">Réserver des vols </button>
+
+            </div>
+            <br />
+            <div class="input-group-btn">
+                <button type="button" class="btn btn-danger" onclick="location.href='@Url.Action("AnnulerReservation", "LogClient", new { name=@Model.clientName})'">Annuler réservation  </button>
+
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+</div>

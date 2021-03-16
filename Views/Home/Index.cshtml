@@ -1,0 +1,635 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/_LayoutHome.cshtml";
+
+}
+
+<style>
+    div.displayed {
+        display: block;
+        margin-left: auto;
+        margin-right: auto
+    }
+</style>
+
+<div class="w3banner">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="~/Content/img/flight1.jpg" class="img-responsive" alt="First slide">
+
+            </div>
+            <div class="item">
+                <img src="~/Content/img/flight2.jpg" class="img-responsive" alt="Second slide">
+
+            </div>
+            <div class="item">
+                <img src="~/Content/img/sky1.jpg" class="img-responsive" alt="Third slide">
+
+            </div>
+        </div>
+        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a><a class="right carousel-control"
+               href="#carousel-example-generic" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right">
+            </span>
+        </a>
+    </div>
+    <div class="main-text">
+        <div class="w3l_bannerinfo">
+            <h3>
+                Traveling tends to magnify all human emotions
+            </h3>
+            <h3>
+                Le Voyage a une tendance de magnifier toutes les émotions humaines
+            </h3>
+            <div class="w3_bannerinfo">
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- /header & Banner -->
+<!-- popup for sign up form -->
+<div class="modal video-modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div id="small-dialog2" class="mfp-hide book-form">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3>Sign Up</h3>
+                <form action="#" method="post">
+                    <input type="text" name="Name" placeholder="Your Name" required="" />
+                    <input type="email" name="Email" class="email" placeholder="Email" required="" />
+                    <input type="password" name="Password" id="password1" class="password" placeholder="Password" required="" />
+                    <input type="password" name="Password" id="password2" class="password" placeholder="Confirm Password" required="" />
+                    <input type="submit" value="Sign Up">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //popup for sign up form -->
+<!-- About Us -->
+<div class="aboutus" id="aboutus">
+    <div class="w3l_flex">
+        <div class="container">
+            <div class="col-md-4 w3l_flex1">
+                <h3> Nous travaillons ensemble pour offrir de la valeur à votre voyage.</h3>
+            </div>
+            <div class="col-md-6 w3l_flex2">
+                <p>
+                    Ce que vous avez fait devient le juge de ce que vous allez faire - en particulier dans l’esprit des autres. Lorsque vous voyagez, vous êtes ce que vous êtes sur place.
+                </p>
+            </div>
+            <div class="col-md-2 w3l_flex3">
+                <a href="#contactus" class="page-scroll">Contacter</a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<div class="w3l_aboutinfo">
+    <div class="container">
+        <div class="col-md-5 w3l_aboutdown5">
+            <h6>Bienvenu</h6>
+            <h3>A propos</h3>
+            <p>  Ce que vous avez fait devient le juge de ce que vous allez faire - en particulier dans l’esprit des autres. Lorsque vous voyagez, vous êtes ce que vous êtes sur place. </p>
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Lire plus</button>
+            <div class="modal video-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">ROVE</h4>
+                        </div>
+                        <div class="modal-body">
+                            <img src="~/images/about.jpg" class="img-responsive" alt="tfg">
+                            <p>We specialise in Code of Conduct.A code of conduct is a set of rules outlining the social norms and religious rules and responsibilities of, or proper practices for, an individual, party or organization. Related concepts include ethical, honor, moral codes and religious laws.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7 w3l_aboutside">
+            <div class="w3l_aboutdown">
+                <div class="w3l_aboutdown1">
+                    <img src="~/images/travel1.jpg" class="img-responsive">
+                    <div class="w3l_aboutimgflex">
+                        <div class="col-md-5 w3l_imgflex">
+                            <img src="~/images/travel2.jpg" class="img-responsive">
+                        </div>
+                        <div class="col-md-7 w3l_imgflex1">
+                            <img src="~/images/travel3.jpg" class="img-responsive">
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/About Us -->
+<!--Team -->
+<div class="team" id="team">
+    <div class="container">
+        <h3>NOS GUIDES</h3>
+        <div class="row pt-md">
+            <div class="col-md-3 w3ls_profile">
+                <div class="img-box">
+                    <img src="~/images/fashion-2940243_640.jpg" class="img-responsive">
+                    <ul class="text-center">
+                        <a href="#"><li><i class="fa fa-facebook"></i></li></a>
+                        <a href="#"><li><i class="fa fa-twitter"></i></li></a>
+                        <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
+                    </ul>
+                </div>
+                <h3>Marrie Doi</h3>
+                <h3 class="w3layouts_team"> Operations</h3>
+
+            </div>
+            <div class="col-md-3 w3ls_profile">
+                <div class="img-box">
+                    <img src="~/images/people-2590560_640.jpg" class="img-responsive">
+                    <ul class="text-center">
+                        <a href="#"><li><i class="fa fa-facebook"></i></li></a>
+                        <a href="#"><li><i class="fa fa-twitter"></i></li></a>
+                        <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
+                    </ul>
+                </div>
+                <h3>Christopher Di</h3>
+                <h3 class="w3layouts_team">Projects</h3>
+
+            </div>
+            <div class="col-md-3 w3ls_profile">
+                <div class="img-box">
+                    <img src="~/images/t2.jpg" class="img-responsive">
+                    <ul class="text-center">
+                        <a href="#"><li><i class="fa fa-facebook"></i></li></a>
+                        <a href="#"><li><i class="fa fa-twitter"></i></li></a>
+                        <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
+                    </ul>
+                </div>
+                <h3>Heather H</h3>
+                <h3 class="w3layouts_team">Marketing</h3>
+
+            </div>
+            <div class="col-md-3 w3ls_profile">
+                <div class="img-box">
+                    <img src="~/images/t4.jpg" class="img-responsive">
+                    <ul class="text-center">
+                        <a href="#"><li><i class="fa fa-facebook"></i></li></a>
+                        <a href="#"><li><i class="fa fa-twitter"></i></li></a>
+                        <a href="#"><li><i class="fa fa-linkedin"></i></li></a>
+                    </ul>
+                </div>
+                <h3>John Doe</h3>
+                <h3 class="w3layouts_team">Guide</h3>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--/Team -->
+<!--Services-->
+<div class="services" id="services">
+    <h3>Services</h3>
+    <div class="container" >
+        
+            <div class="col-md-4 wthree_service">
+                <figure class="services-icon">
+                    <i class="fa fa-paint-brush" aria-hidden="true"></i>
+                </figure>
+                <div class="title-services"> Accomidations </div>
+                <div class="content-services"> Create a beautiful, functional site that speaks to your clients. From scratch. </div>
+                <a href="#" data-toggle="modal" data-target="#myModal1">Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                <div class="modal video-modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModal1">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">ROVE</h4>
+                            </div>
+                            <div class="modal-body">
+                                <img src="~/images/accomidation.jpg" class="img-responsive" alt="tfg">
+                                <p>We specialise in Code of Conduct.A code of conduct is a set of rules outlining the social norms and religious rules and responsibilities of, or proper practices for, an individual, party or organization. Related concepts include ethical, honor, moral codes and religious laws.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 wthree_service">
+                <figure class="services-icon">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </figure>
+                <div class="title-services"> Agents </div>
+                <div class="content-services"> Create a beautiful, functional site that speaks to your clients. From scratch. </div>
+                <a href="#" data-toggle="modal" data-target="#myModal1">Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                <div class="modal video-modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModal1">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">ROVE</h4>
+                            </div>
+                            <div class="modal-body">
+                                <img src="~/images/accomidation.jpg" class="img-responsive" alt="tfg">
+                                <p>We specialise in Code of Conduct.A code of conduct is a set of rules outlining the social norms and religious rules and responsibilities of, or proper practices for, an individual, party or organization. Related concepts include ethical, honor, moral codes and religious laws.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-md-4 wthree_service">
+                <figure class="services-icon">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                </figure>
+                <div class="title-services"> Charter </div>
+                <div class="content-services"> Create a beautiful, functional site that speaks to your clients. From scratch.</div>
+                <a href="#" data-toggle="modal" data-target="#myModal1">Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                <div class="modal video-modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModal1">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">ROVE</h4>
+                            </div>
+                            <div class="modal-body">
+                                <img src="~/images/accomidation.jpg" class="img-responsive" alt="tfg">
+                                <p>We specialise in Code of Conduct.A code of conduct is a set of rules outlining the social norms and religious rules and responsibilities of, or proper practices for, an individual, party or organization. Related concepts include ethical, honor, moral codes and religious laws.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 wthree_service">
+                <figure class="services-icon">
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                </figure>
+                <div class="title-services">Guide </div>
+                <div class="content-services"> Create a beautiful, functional site that speaks to your clients. From scratch. </div>
+                <a href="#" data-toggle="modal" data-target="#myModal1">Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                <div class="modal video-modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModal1">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">ROVE</h4>
+                            </div>
+                            <div class="modal-body">
+                                <img src="~/images/accomidation.jpg" class="img-responsive" alt="tfg">
+                                <p>We specialise in Code of Conduct.A code of conduct is a set of rules outlining the social norms and religious rules and responsibilities of, or proper practices for, an individual, party or organization. Related concepts include ethical, honor, moral codes and religious laws.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 wthree_service">
+                <figure class="services-icon">
+                    <i class="fa fa-comments" aria-hidden="true"></i>
+                </figure>
+                <div class="title-services">Locations </div>
+                <div class="content-services"> Create a beautiful, functional site that speaks to your clients. From scratch.  </div>
+                <a href="#" data-toggle="modal" data-target="#myModal1">Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                <div class="modal video-modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModal1">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">ROVE</h4>
+                            </div>
+                            <div class="modal-body">
+                                <img src="~/images/accomidation.jpg" class="img-responsive" alt="tfg">
+                                <p>We specialise in Code of Conduct.A code of conduct is a set of rules outlining the social norms and religious rules and responsibilities of, or proper practices for, an individual, party or organization. Related concepts include ethical, honor, moral codes and religious laws.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 wthree_service">
+                <figure class="services-icon">
+                    <i class="fa fa fa-puzzle-piece" aria-hidden="true"></i>
+                </figure>
+                <div class="title-services">Things to do </div>
+                <div class="content-services"> Create a beautiful, functional site that speaks to your clients. From scratch. </div>
+                <a href="#" data-toggle="modal" data-target="#myModal1">Read More <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                <div class="modal video-modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModal1">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">ROVE</h4>
+                            </div>
+                            <div class="modal-body">
+                                <img src="~/images/accomidation.jpg" class="img-responsive" alt="tfg">
+                                <p>We specialise in Code of Conduct.A code of conduct is a set of rules outlining the social norms and religious rules and responsibilities of, or proper practices for, an individual, party or organization. Related concepts include ethical, honor, moral codes and religious laws.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+</div>
+
+<!--/Services-->
+<!--Testimonials-->
+<div class="testimonials" id="testimonials">
+    <div class="container">
+        <h3>What Client say</h3>
+        <div class="w3l_quote">
+            <i class="fa fa-quote-left" aria-hidden="true"></i>
+
+            <div class="flexslider-info">
+                <section class="slider">
+                    <div class="flexslider">
+                        <ul class="slides">
+                            <li>
+                                <div class="testmonial_info">
+                                    <img src="~/images/portrait-2163997_640.jpg" class="img-responsive">
+                                    <div class="caption">
+                                        <p>Lorem Ipsum is simply dummy text of the printing and 	typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                                        <h3>Lina</h3>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="testmonial_info">
+                                    <img src="~/images/man-2933801_640.jpg" class="img-responsive">
+                                    <div class="caption">
+                                        <p>Lorem Ipsum is simply dummy text of the printing and 	typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                                        <h3>Adrien</h3>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="testmonial_info">
+                                    <img src="~/images/man-2933801_640.jpg" class="img-responsive">
+                                    <div class="caption">
+                                        <p>Lorem Ipsum is simply dummy text of the printing and 	typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+                                        <h3>Adrien</h3>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <div class="clearfix"> </div>
+                        </ul>
+                    </div><div class="clearfix"> </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/Testimonials-->
+<!--/gallery-->
+<div class="gallery" id="gallery">
+    <div class="container">
+        <div class="tittle-w3">
+            <h3>Gallery</h3>
+        </div>
+
+        <div class="agile_gallery_grids w3-agile">
+            <ul class="clearfix demo">
+                <li>
+                    <div class="gallery-grid1">
+                        <img src="~/images/p1.jpg" alt=" " class="img-responsive" />
+                        <div class="p-mask">
+                            <h4>ROVE</h4>
+                            <p>NIGERIA.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="gallery-grid1">
+                        <img src="~/images/p2.jpg" alt=" " class="img-responsive" />
+                        <div class="p-mask">
+                            <h4>ROVE</h4>
+                            <p>SWEDEN.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="gallery-grid1">
+                        <img src="~/images/p3.jpg" alt=" " class="img-responsive" />
+                        <div class="p-mask">
+                            <h4>ROVE</h4>
+                            <p>SOUTH AFRICA.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="gallery-grid1">
+                        <img src="~/images/p4.jpg" alt=" " class="img-responsive" />
+                        <div class="p-mask">
+                            <h4>ROVE</h4>
+                            <p>LONDON.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="gallery-grid1">
+                        <img src="~/images/p5.jpg" alt=" " class="img-responsive" />
+                        <div class="p-mask">
+                            <h4>ROVE</h4>
+                            <p>AUSTRALIA.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="gallery-grid1">
+                        <img src="~/images/p6.jpg" alt=" " class="img-responsive" />
+                        <div class="p-mask">
+                            <h4>ROVE</h4>
+                            <p>NEWZELAND.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="gallery-grid1">
+                        <img src="~/images/p7.jpg" alt=" " class="img-responsive" />
+                        <div class="p-mask">
+                            <h4>ROVE</h4>
+                            <p>USA.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="gallery-grid1">
+                        <img src="~/images/p8.jpg" alt=" " class="img-responsive" />
+                        <div class="p-mask">
+                            <h4>ROVE</h4>
+                            <p>BANGKOK.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="gallery-grid1">
+                        <img src="~/images/p9.jpg" alt=" " class="img-responsive" />
+                        <div class="p-mask">
+                            <h4>ROVE</h4>
+                            <p>THAILAND.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="gallery-grid1">
+                        <img src="~/images/p10.jpg" alt=" " class="img-responsive" />
+                        <div class="p-mask">
+                            <h4>ROVE</h4>
+                            <p>SINGAPORE.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="gallery-grid1">
+                        <img src="~/images/p11.jpg" alt=" " class="img-responsive" />
+                        <div class="p-mask">
+                            <h4>ROVE</h4>
+                            <p>MALAYSIA.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="gallery-grid1">
+                        <img src="~/images/p12.jpg" alt=" " class="img-responsive" />
+                        <div class="p-mask">
+                            <h4>ROVE</h4>
+                            <p>HONG KONG.</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--//gallery-->
+<!--Contact-->
+<div class="contactUs" id="contactus">
+    <h3>Contact Form</h3>
+    <section id="contact">
+
+
+        <div class="container">
+
+            <div class="col-md-6 agile_contact">
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label>Your name</label>
+                        <input type="text" class="form-control" name="name" id="name" placeholder=" " required="">
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" class="form-control" name="email" id="email" placeholder=" " required="">
+
+                    </div>
+                    <div class="form-group">
+                        <label>Mobile No.</label>
+                        <input type="text" name="text" placeholder=" " required="">
+                    </div>
+            </div>
+            <div class="col-md-6 agile_contact">
+                <div class="form-group">
+                    <label> Message</label>
+                    <textarea name="text" placeholder="" required=""></textarea>
+                </div>
+                <div>
+
+                    <button type="submit" class="btn btn-default submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>  Send Message</button>
+                </div>
+
+            </div>
+            <div class="clearfix"></div>
+            </form>
+        </div>
+
+
+    </section>
+</div>
+<!--/Contact-->
+<div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6509915.939484077!2d-123.79728565006775!3d37.1843152587944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb9fe5f285e3d%3A0x8b5109a227086f55!2sCalifornia%2C+USA!5e0!3m2!1sen!2sin!4v1509946591019" style="border:0" allowfullscreen></iframe>
+</div>
+<div class="footer">
+    <div class="container">
+        <p>&copy;  2021. All Rights Reserved </p>
+    </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/move-top.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/grayscale.js"></script>
+<script src="js/SmoothScroll.min.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+
+<!--Start-slider-script-->
+<script type="text/javascript">
+
+    $(window).load(function () {
+        $('.flexslider').flexslider({
+            animation: "slide",
+            start: function (slider) {
+                $('body').removeClass('loading');
+            }
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var defaults = {
+            containerID: 'toTop', // fading element id
+            containerHoverID: 'toTopHover', // fading element hover id
+            scrollSpeed: 1200,
+            easingType: 'linear'
+        };
+        $().UItoTop({ easingType: 'easeOutQuart' });
+    });
+</script>
+
+<!--gallery-js -->
+<script src="js/jquery.picEyes.js"></script>
+<script>
+    $(function () {
+        //picturesEyes($('.demo li'));
+        $('.demo li').picEyes();
+    });
+</script>
+<!--//gallery-js -->

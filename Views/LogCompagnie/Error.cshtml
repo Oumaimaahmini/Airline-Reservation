@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Error";
+    Layout = "~/Views/_LayoutError.cshtml";
+
+}
+
+<div class="header">
+    <h1>Smart error page</h1>
+</div>
+<div class="w3-main">
+    <div class="agile-info">
+        <h3>SORRY</h3>
+        <h2>4<img src="~/images/confused.gif" alt="image">4</h2>
+        <p>An error Occurred wrong login or password And Your Page could not be Served.</p>
+
+
+        <div class="input-group-btn">
+            <button type="button" class="btn btn-danger" onclick="location.href='@Url.Action("Index", "Home")'">BACK HOME</button>
+
+        </div>
+    </div>
+</div>
+<div class="footer-w3l">
+    <p>&copy; 2021  Page. All rights reserved </p>
+</div>
+
