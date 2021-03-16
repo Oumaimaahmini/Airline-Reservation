@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="volDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="nom" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="prenom" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="CIN" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="age" Type="int" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="128" />
+    <Property Name="password" Type="varchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="Compagnie">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="nom" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="secteur" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="128" />
+    <Property Name="password" Type="varchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="Vol">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="nombre_max" Type="int" Nullable="false" />
+    <Property Name="destination" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ville_depart" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="date_depart" Type="date" Nullable="false" />
+    <Property Name="prix" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="compagnie" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="volDBModelStoreContainer">
+    <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Compagnie" EntityType="Self.Compagnie" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vol" EntityType="Self.Vol" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
